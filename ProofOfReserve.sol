@@ -47,7 +47,7 @@ contract ProofOfReserve {
     //     return;
     // }
 
-    if(keccak256(bytes(name)) == keccak256(bytes("Single-Bed Room"))) {
+    if(keccak256(bytes(name)) == keccak256(bytes("Single Room"))) {
         if (msg.value != 0.001 ether) {
             //---fire the event---
             emit RegistrationError(msg.sender, name, "Incorrect amout of Ether. You should pay 0.001 ether");
@@ -57,19 +57,33 @@ contract ProofOfReserve {
             return;
         } 
 
-    }else if(keccak256(bytes(name)) == keccak256(bytes("Twin-Bed Room"))){
+    }else if(keccak256(bytes(name)) == keccak256(bytes("Standard Double Room"))){
         if (msg.value != 0.002 ether) {
             emit RegistrationError(msg.sender, name, "Incorrect amout of Ether. You should pay 0.002 ether");
             payable(msg.sender).transfer(msg.value);
             return;
         }     
 
-    }else if(keccak256(bytes(name)) == keccak256(bytes("Deluxe Room"))){
+    }else if(keccak256(bytes(name)) == keccak256(bytes("Standard Twin Room"))){
         if (msg.value != 0.003 ether) {
             emit RegistrationError(msg.sender, name, "Incorrect amout of Ether. You should pay 0.003 ether");
             payable(msg.sender).transfer(msg.value);
             return;
-        }     
+        } 
+
+    }else if(keccak256(bytes(name)) == keccak256(bytes("Deluxe Twin Room"))){
+        if (msg.value != 0.004 ether) {
+            emit RegistrationError(msg.sender, name, "Incorrect amout of Ether. You should pay 0.003 ether");
+            payable(msg.sender).transfer(msg.value);
+            return;
+        }
+
+    }else if(keccak256(bytes(name)) == keccak256(bytes("Deluxe Twin Room with Sofa"))){
+        if (msg.value != 0.005 ether) {
+            emit RegistrationError(msg.sender, name, "Incorrect amout of Ether. You should pay 0.003 ether");
+            payable(msg.sender).transfer(msg.value);
+            return;
+        }    
 
     }else{
         emit RegistrationError(msg.sender, name, "Room not found, please contact staff");

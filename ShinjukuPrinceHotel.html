@@ -17,24 +17,38 @@
         <div align="center" style="margin-top: 200px;">
 
             <label class="col-lg-2 control-label">
-                    Single-Bed Room</label>
-            <img src="image/Single Bed.jpg" />
-            <button id="btnReserve" onclick="btnReserve('Single-Bed Room',1000000000000000)">
+                Single Room</label>
+            <img src="image/Single Room.jpg" />
+            <button id="btnReserve" onclick="btnReserve('Single Room',1000000000000000)">
                 reserve ( 0.001 ETH )
             </button>
 
             <label class="col-lg-2 control-label" ">
-                    Twin-Bed Room </label>
-                <img src=" image/Twin Bed.jpg" />
-            <button id="btnReserve" onclick="btnReserve('Twin-Bed Room',2000000000000000)">
+                Standard Double Room </label>
+                <img src=" image/Standard Double Room.jpg" />
+            <button id="btnReserve" onclick="btnReserve('Standard Double Room',2000000000000000)">
                 reserve ( 0.002 ETH )
             </button>
 
             <label class="col-lg-2 control-label" ">
-                    Deluxe Room</label>
-                <img src=" image/Delux Room.jpg" />
-            <button id="btnReserve" onclick="btnReserve('Deluxe Room',3000000000000000)">
+                Standard Twin Room</label>
+                <img src=" image/Standard Twin Room.jpg" />
+            <button id="btnReserve" onclick="btnReserve('Standard Twin Room',3000000000000000)">
                 reserve ( 0.003 ETH )
+            </button>
+
+            <label class="col-lg-2 control-label" ">
+                Deluxe Twin Room</label>
+            <img src=" image/Deluxe Twin Room.jpg" />
+            <button id="btnReserve" onclick="btnReserve('Deluxe Twin Room',4000000000000000)">
+                reserve ( 0.004 ETH )
+            </button>
+
+            <label class="col-lg-2 control-label" ">
+                Deluxe Twin Room with Sofa</label>
+            <img src=" image/Deluxe Twin Room with Sofa.jpg" />
+            <button id="btnReserve" onclick="btnReserve('Deluxe Twin Room with Sofa',5000000000000000)">
+                reserve ( 0.005 ETH )
             </button>
 
         </div>
@@ -241,7 +255,7 @@
 
         async function loadContract() {
 
-            return await new window.web3.eth.Contract(abi, '0xF61EA3d854BF9182B6Ca46A3ccf4537a5d31021F');
+            return await new window.web3.eth.Contract(abi, '0x389355651f779d18e8404074e2661813e5342741');
 
         }
 
